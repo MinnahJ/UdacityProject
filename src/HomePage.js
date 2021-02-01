@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function HomePage(props){
   return (
-    <Link to="/"><button className="close-search" onClick={props.resetSearch} >Close</button></Link>
+    <a href="/" <button class="close-search">Close</button></a>
   )
 }
 
