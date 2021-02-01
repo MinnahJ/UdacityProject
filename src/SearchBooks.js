@@ -3,11 +3,13 @@ import HomePage from "./HomePage"
 import Book from "./Book"
 import * as BooksAPI from "./BooksAPI"
 
-class SearchBooks extends React.Component {
-  state = {
-    searchResults : [],
-    value: ''
-  }
+const searchResults = this.stateResults.map((searchedBook) ==> {
+  const shelf = /* Find the shelf of searchedBook */
+  return {
+    ...searchedBook,
+    shelf,                                                                                       
+  };
+{);                                           
 
   handleChange = event => {
     const value = event.target.value;
