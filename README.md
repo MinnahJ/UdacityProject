@@ -10,3 +10,9 @@ MyReads lets you manage your digital bookshelf. It supports three shelves:
 
 Additionally you can search and add books to any shelf. 
 
+STEPS:
+
+-Install the project (npm install)
+
+-start the project (npm start)
+
