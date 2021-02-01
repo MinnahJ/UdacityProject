@@ -11,10 +11,9 @@ class BooksApp extends React.Component {
     books : []
   }
 
-  componentDidMount() {
-    BooksAPI.getAll().then((books) => {
-      this.setState({ books })
-    })
+  async componentDidMount() {
+    const books =await BooksAPI.getAll();
+      this.setState({ books });
   }
 
   shelves = [
@@ -36,7 +35,10 @@ class BooksApp extends React.Component {
       const updatedBooks = this.state.books.map(c => {
         // if it's already in the state, then change it's shelf
         if (c.id === book.id) {
-          c.shelf = shelf
+          return {
+            ...c,
+            shelf,
+          };
         }
         return c;
       });
